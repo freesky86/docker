@@ -34,6 +34,8 @@ docker run -p 8080:8080 spring-boot-demo
 
 构建好的的镜像，如果想在别的电脑上运行，需要先打包，将构建好的Docker镜像导出为tar文件：    
 docker save -o spring-boot-demo.tar spring-boot-demo    
+或者   
+docker save spring-boot-demo > spring-boot-demo.tar
 将spring-boot-demo.tar文件传输到别的电脑上，比如CentOS服务器。   
 在CentOS服务器上加载Docker镜像：   
 docker load -i spring-boot-demo.tar    
