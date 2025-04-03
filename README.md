@@ -24,7 +24,7 @@ docker version
 docker pull openjdk:17-jdk-alpine  
 解决办法是找一台能连上 https://registry-1.docker.io 的电脑，执行上面的指令，下载image，然后执行   
 docker save -o openjdk-17-jdk-alpine.tar openjdk:17-jdk-alpine   
-把下载的image打包成jar文件，然后传输到本地，在本地执行下面的命令导入镜像image   
+把下载的image打包成tar文件，然后传输到本地，在本地执行下面的命令导入镜像image   
 docker load -i openjdk-17-jdk-alpine.tar   
 然后，就可以使用docker build命令构建镜像image，比如    
 docker build -t spring-boot-demo .    
