@@ -6,7 +6,7 @@ https://www.docker.com/
 https://docs.docker.com/desktop/setup/install/windows-install/   
 
 # CentOS环境
-安装   
+安装docker   
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin   
 启动docker   
 service docker start    
