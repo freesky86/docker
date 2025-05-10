@@ -33,6 +33,11 @@ docker build -t spring-boot-demo .
 docker run -p 8080:8080 spring-boot-demo   
 后面一个8080是容器的端口，前面一个8080是宿主机的端口，也就是浏览器访问的端口。    
 
+如果想要后台执行，可以加上-d参数，比如    
+docker run -d -p 8080:8080 spring-boot-demo  
+-d 是--detach的缩写，表示​​以“分离模式”运行容器​​，即让容器在后台运行（类似守护进程的方式）
+执行后会返回一个完整的容器ID，实际只需要使用前12位就可以了。
+
 构建好的的镜像，如果想在别的电脑上运行，需要先打包，将构建好的Docker镜像导出为tar文件：    
 docker save -o spring-boot-demo.tar spring-boot-demo    
 或者   
